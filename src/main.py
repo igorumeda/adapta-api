@@ -1,10 +1,11 @@
 from fastapi import FastAPI
+from src.api.controllers.module import modules
 
 app = FastAPI()
 
-@app.get("/")
-def home():
-    pass
+for router in modules():
+    app.include_router(router)
+
 
 if __name__ == "__main__":
     import uvicorn

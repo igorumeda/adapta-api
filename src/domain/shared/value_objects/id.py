@@ -1,4 +1,4 @@
-from src.core.object_domain import ObjectDomain
+from src.domain.core.object_domain import ObjectDomain
 from src.shared.exceptions.domain_exception import DomainException
 from src.shared.utils.nano_id import NanoId
 
