@@ -1,12 +1,10 @@
 from fastapi import APIRouter
-from typing import Callable, Type, TypeVar
+from typing import Callable, Type
 from src.api.core.controller import Controller
 
-T = TypeVar("T", bound=Controller)
-
-def _create_method_decorator(http_method: str) -> Callable[[str], Callable[[Type[T]], Type[T]]]:
-    def decorator(path: str) -> Callable[[Type[T]], Type[T]]:
-        def wrapper(cls: Type[T]) -> Type[T]:
+def _create_method_decorator(http_method: str) -> Callable[[str], Callable[[Type[Controller]], Type[Controller]]]:
+    def decorator(path: str) -> Callable[[Type[Controller]], Type[Controller]]:
+        def wrapper(cls: Type[Controller]) -> Type[Controller]:
             instance = cls()
             router = APIRouter()
             route_func = getattr(router, http_method.lower())
