@@ -1,7 +1,7 @@
-from fastapi import APIRouter
 from src.api.controllers.usuarios.obter_usuario_controller import ObterUsuarioController
+from src.api.core.controller import Controller
 
-def UsuarioModule() -> list[APIRouter]:
+def UsuarioModule() -> list[type[Controller]]:
     return [
-        ObterUsuarioController.__router__
+        ObterUsuarioController
     ]

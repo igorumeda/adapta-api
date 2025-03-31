@@ -12,7 +12,7 @@ def _create_method_decorator(http_method: str) -> Callable[[str], Callable[[Type
             route_func = getattr(router, http_method.lower())
             route_func(path)(instance.handle)
             instance.__router__ = router
-            return cls 
+            return cls
         return wrapper
     return decorator
 
