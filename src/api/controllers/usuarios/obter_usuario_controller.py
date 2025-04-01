@@ -1,10 +1,7 @@
-from fastapi import APIRouter
+from src.api.core.decorator_factory import get
 from src.api.core.controller import Controller
-from src.api.core.http import get
 
-@get("/usuarios")
+@get("/usuarios", tags=["Usuários"])
 class ObterUsuarioController(Controller):
-    __router__ = APIRouter()
-
-    def handle(self) -> object:
-        return {"id": 1, "nome": "Fulano"}
+    def handle(self):
+        return {"id": "1", "nome": "Fulano"}
