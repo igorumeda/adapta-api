@@ -1,5 +1,5 @@
 from typing import Generic, TypeVar
-from src.core import ObjectDomain
+from src.domain.core.object_domain import ObjectDomain
 
 TProps = TypeVar('TProps')
 TState = TypeVar('TState')
@@ -14,4 +14,5 @@ class Entity(Generic[TProps, TState], ObjectDomain[TProps, TState]):
   
   Obs.: Implementar decorador @dataclass nos tipos criados
   '''
-  pass
+  def __init__(self, props: TProps):
+    super().__init__(props)

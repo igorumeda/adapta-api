@@ -5,5 +5,75 @@
     "cpf": "77040684403",
     "email": "agathabrendabarbosa@slb.com.br",
     "senha": "Jk6RK5QA5j"
+  },
+  {
+    "id": "2",
+    "nome": "Bruno Henrique Castro",
+    "cpf": "10584372010",
+    "email": "brunohenrique@empresa.com",
+    "senha": "Xp9Tf2LmZq"
+  },
+  {
+    "id": "3",
+    "nome": "Caroline Souza Almeida",
+    "cpf": "22846097101",
+    "email": "carol.souza@dominio.com",
+    "senha": "Ue4Rz8TyKm"
+  },
+  {
+    "id": "4",
+    "nome": "Daniel Costa Ribeiro",
+    "cpf": "38502647820",
+    "email": "daniel.ribeiro@exemplo.org",
+    "senha": "Fg7Po1QrWs"
+  },
+  {
+    "id": "5",
+    "nome": "Elaine Martins Freitas",
+    "cpf": "49820765319",
+    "email": "elaine.freitas@corp.com",
+    "senha": "Mn3Xc8LkHp"
+  },
+  {
+    "id": "6",
+    "nome": "Felipe Augusto Lima",
+    "cpf": "65039281450",
+    "email": "felipe.lima@dominio.net",
+    "senha": "As5Vb7GjUy"
+  },
+  {
+    "id": "7",
+    "nome": "Giovanna Rocha Tavares",
+    "cpf": "31297850460",
+    "email": "giovanna.tavares@empresa.com",
+    "senha": "Lp2Kd9MxWe"
+  },
+  {
+    "id": "8",
+    "nome": "Henrique Melo Dantas",
+    "cpf": "40876539218",
+    "email": "henrique.melo@techmail.com",
+    "senha": "Rt6Gw3ZqAs"
+  },
+  {
+    "id": "9",
+    "nome": "Isabela Ferreira Lopes",
+    "cpf": "87912034690",
+    "email": "isabela.lopes@softmail.com",
+    "senha": "Qy7Nz4KlEp"
+  },
+  {
+    "id": "10",
+    "nome": "João Victor Nascimento",
+    "cpf": "50234918725",
+    "email": "joao.victor@empresa.net",
+    "senha": "Bn8Tr5WqYu"
+  },
+  {
+    "id": "11",
+    "nome": "Igor Umeda",
+    "cpf": "06306254412",
+    "email": "igor.umeda@gmail.com",
+    "senha": "12345678"
   }
 ]

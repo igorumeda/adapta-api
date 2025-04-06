@@ -19,6 +19,9 @@ class State:
   senha: str
   
 class Usuario(Entity[UsuarioProps, State]):
+  def __init__(self, props: UsuarioProps):
+    super().__init__(props)
+  
   def export(self):
     return UsuarioProps(
       self.state.id,
@@ -33,9 +36,9 @@ class Usuario(Entity[UsuarioProps, State]):
       raise DomainException("CPF inválido")
     
     return State(
-      self.state.id,
-      self.state.nome,
-      self.state.cpf,
-      self.state.email,
-      self.state.senha,
+      props.id,
+      props.nome,
+      props.cpf,
+      props.email,
+      props.senha,
     )

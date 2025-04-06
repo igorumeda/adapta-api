@@ -1,12 +1,12 @@
-import json
 from typing import List
+from pydantic import parse_obj_as
 from src.domain.entities.usuario.usuario import Usuario, UsuarioProps
 from src.shared.utils.json import ExtractJsonFrom
 
 class UsuarioAdapter:
   def obterPor(self, cpf: str) -> Usuario | None:
     usuarioData = ExtractJsonFrom(__file__, "usuarios.json")
-    usuarioProps: List[UsuarioProps] = json.loads(usuarioData)
+    usuarioProps: List[UsuarioProps] = parse_obj_as(List[UsuarioProps], usuarioData)
     
     for usuario in usuarioProps:
       if usuario.cpf == cpf:

@@ -6,4 +6,10 @@ class ObterUsuariosService(ApplicationService):
     self.adapter = UsuarioAdapter()
     
   def handle(self, cpf: str):
-    return self.adapter.obterPor(cpf)
+    usuario = self.adapter.obterPor(cpf)
+    if not usuario:
+      return {
+        "message": "Usuário não encontrado"
+      }
+    
+    return usuario.export()
