@@ -6,8 +6,7 @@ TState = TypeVar('TState')
 
 class ObjectDomain(ABC, Generic[TProps, TState]):
   def __init__(self, props: TProps):
-    super().__init__()
-    self.state = self._parse(props)
+    self.state = self.parse(props)
 
   @abstractmethod
   def export(self) -> TProps:
@@ -15,6 +14,6 @@ class ObjectDomain(ABC, Generic[TProps, TState]):
     pass
 
   @abstractmethod
-  def _parse(self, props: TProps) -> TState:
+  def parse(self, props: TProps) -> TState:
     '''Faça todas as validações das propriedades da entidade'''
     pass
