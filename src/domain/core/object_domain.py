@@ -15,5 +15,13 @@ class ObjectDomain(ABC, Generic[TProps, TState]):
 
   @abstractmethod
   def parse(self, props: TProps) -> TState:
-    '''Faça todas as validações das propriedades da entidade'''
+    '''
+    Faça todas as validações das propriedades da entidade. Não retorne o próprio estado da classe, crie um novo estado e retorne.
+    
+    Exemplo: 
+    
+        parse(...):
+          return State(...)
+          ...
+    '''
     pass

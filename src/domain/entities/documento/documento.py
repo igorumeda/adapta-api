@@ -15,9 +15,6 @@ class State:
   extensao: str
 
 class Documento(Entity[DocumentoProps, State]):
-  def __init__(self, props: DocumentoProps):
-    super().__init__(props)
-
   def export(self):
     return DocumentoProps(
       id = self.state.id.export(),
@@ -26,8 +23,8 @@ class Documento(Entity[DocumentoProps, State]):
     )
   
   def parse(self, props: DocumentoProps) -> State:
-    id = Id(props.id).export()
-    nome = Nome(props.nome).export()
+    id = Id(props.id)
+    nome = Nome(props.nome)
     extensao = props.extensao
 
-    return Documento(DocumentoProps(id, nome, extensao))
+    return State(id, nome, extensao)
