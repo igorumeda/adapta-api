@@ -1,4 +1,4 @@
-from domain.core.value_object import ValueObject
+from src.domain.core.value_object import ValueObject
 from src.shared.exceptions import DomainException
 
 class Nome(ValueObject[str, str]):

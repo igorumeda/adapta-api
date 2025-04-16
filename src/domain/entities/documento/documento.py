@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from src.core import Entity
+from src.domain.core.entity import Entity
 from src.domain.shared.value_objects import Id, Nome
 
 @dataclass
@@ -15,11 +15,14 @@ class State:
   extensao: str
 
 class Documento(Entity[DocumentoProps, State]):
+  def __init__(self, props: DocumentoProps):
+    super().__init__(props)
+  
   def export(self):
     return DocumentoProps(
-      id = self.state.id.export(),
-      nome = self.state.nome.export(),
-      extensao = self.state.extensao
+      self.state.id.export(),
+      self.state.nome.export(),
+      self.state.extensao
     )
   
   def parse(self, props: DocumentoProps) -> State:
