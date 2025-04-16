@@ -1,7 +1,4 @@
-# from src.modules.usuarios.controllers.obter_usuario import ObterUsuarioController
+from src.api.core.controller import Controller
 
-# def get_routers():
-#     return [ObterUsuarioController.__router__]
-
-def organizacao_module():
+def OrganizacaoModule() -> list[type[Controller]]:
     return []
